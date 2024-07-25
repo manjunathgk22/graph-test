@@ -1,7 +1,8 @@
 import "./App.css";
 import { GraphCanvas, useSelection } from "reagraph";
-import { graphData } from "./dummyData";
+// import { graphData } from "./dummyData";
 import { useRef } from "react";
+import graphData from './graphData.json';
 
 function App() {
   const graphRef = useRef(null);
@@ -39,7 +40,7 @@ function App() {
         edges={graphData.edges}
         // labelType="nodes"
         draggable
-        // edgeInterpolation="curved"
+        edgeInterpolation="curved"
         onCanvasClick={onCanvasClick}
         onNodeClick={onNodeClick}
         onNodePointerOver={onNodePointerOver}
