@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { GraphCanvas, useSelection } from "reagraph";
+import { graphData } from "./dummyData";
+import { useRef } from "react";
 
 function App() {
+  const graphRef = useRef(null);
+  const {
+    selections,
+    actives,
+    onNodeClick,
+    onCanvasClick,
+    onNodePointerOver,
+    onNodePointerOut,
+  } = useSelection({
+    ref: graphRef,
+    nodes: graphData.nodes,
+    edges: graphData.edges,
+    pathSelectionType: "out",
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <GraphCanvas
+        draggable
+        nodes={graphData.nodes}
+        edges={graphData.edges}
+        ref={graphRef}
+        selections={selections}
+        onCanvasClick={onCanvasClick}
+        onNodeClick={onNodeClick}
+        edgeLabelP
+        osition="above" labelType="edges" 
+      /> */}
+      <GraphCanvas
+        selections={selections}
+        actives={actives}
+        ref={graphRef}
+        nodes={graphData.nodes}
+        edges={graphData.edges}
+        // labelType="nodes"
+        draggable
+        // edgeInterpolation="curved"
+        onCanvasClick={onCanvasClick}
+        onNodeClick={onNodeClick}
+        onNodePointerOver={onNodePointerOver}
+        onNodePointerOut={onNodePointerOut}
+      />
     </div>
   );
 }
