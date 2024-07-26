@@ -3,8 +3,8 @@
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
-const NUM_USERS = 100;
-const NUM_TRANSACTIONS = 10000;
+const NUM_USERS = 10;
+const NUM_TRANSACTIONS = 100;
 
 const getRandomInt = (max) => Math.floor(Math.random() * max) + 1;
 
@@ -38,10 +38,10 @@ for (let i = 0; i < NUM_TRANSACTIONS; i++) {
 
     // Add nodes if they don't already exist
     if (!nodes[sender_id]) {
-      nodes[sender_id] = { id: sender_id, label: `User ${sender_id}` };
+      nodes[sender_id] = { id: sender_id, label: `User ${sender_id}`, data: transaction };
     }
     if (!nodes[receiver_id]) {
-      nodes[receiver_id] = { id: receiver_id, label: `User ${receiver_id}` };
+      nodes[receiver_id] = { id: receiver_id, label: `User ${receiver_id}`, data: transaction };
     }
 
     // Add the transaction to the edges map
@@ -58,7 +58,8 @@ for (let i = 0; i < NUM_TRANSACTIONS; i++) {
 // Convert edges map to an array
 const edges = Array.from(edgesMap.values()).map(edge => ({
   ...edge,
-  label: `Amount: ${edge.amount.toFixed(2)}` // update the label with the aggregated amount
+  label: `Amount: ${edge.amount.toFixed(2)}`, // update the label with the aggregated amount
+  data: {...edge}
 }));
 
 const graphData = {
