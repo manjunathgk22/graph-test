@@ -89,7 +89,11 @@ const ReaGraph = () => {
       </div>
       <div className="flex">
         <div className="flex flex-1 relative transition-all duration-300">
-          <GraphCanvas
+          
+          {
+            !graphData.nodes?.length ? <div className="flex flex-1 flex-col justify-center items-center">
+              <h3>No Accounts found for {selectedAccountNumber}</h3>
+            </div>: <GraphCanvas
             key={selectedAccountNumber}
             selections={_selections}
             actives={actives}
@@ -130,16 +134,19 @@ const ReaGraph = () => {
               // setselected()
             }}
           />
+          }
         </div>
         <Resizable
       width={width}
       height={window.innerHeight - 70}
       onResize={onResize}
       resizeHandles={['w']}
+      
     >
+      <div className="relative" style={{width, minHeight: window.innerHeight - 70, height: window.innerHeight - 70}}>
         <div
-          className=" p-4 bg-slate-100 transition-all duration-300"
-          style={{width, minHeight: window.innerHeight - 70}}
+          className=" p-4 bg-slate-100 transition-all duration-300 overflow-auto "
+          style={{width, minHeight: window.innerHeight - 70, height: window.innerHeight - 70}}
         >
           {selected ? (
             <ul className=" text-left">
@@ -185,6 +192,7 @@ const ReaGraph = () => {
               </div>
             </div>
           ) : null}
+        </div>
         </div>
         </Resizable>
       </div>

@@ -610,10 +610,10 @@ export const convertToGraph = ()=>{
         label: `${amount}`,
         data: {
           amount,
+          'Transaction Date': transaction['Transaction DateTime'],
           from: sourceAccount,
           to: destinationAccount,
           transactionRef,
-          'Transaction Date': transaction['Transaction DateTime'],
           
         }
       });
