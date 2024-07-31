@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.react-resizable-handle{
+  width: 18px !important;
+  height: 18px !important;
+  background-size: contain !important;
+  cursor: grab !important;
+}
