@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { DATA, rawData } from "./csvjson";
 import { Resizable } from "react-resizable";
 import "react-resizable/css/styles.css";
+import Transactions from "./Transactions";
 const ReaGraph = () => {
   const graphRef = useRef(null);
   const [width, setWidth] = useState(200);
@@ -45,19 +46,16 @@ const ReaGraph = () => {
     // graphRef.current?.centerGraph(["2086916253"]);
   }, []);
 
-  
-
   useEffect(() => {
     const result = filterTransactions(selectedAccountNumber);
     setgraphData(result);
   }, [selectedAccountNumber]);
-  console.log('rrrr',graphData);
-
 
   const tableData = useMemo(() => {
-    if (selected) return filterTransactions(selected.id, graphData)?.edges;
+    if (selected) return filterGraphData(selected.id, graphData)?.edges;
     else return [];
   }, [selected, graphData]);
+  console.log("rrrr", graphData);
 
   // useEffect(() => {
   //   if (selected) {
@@ -68,7 +66,7 @@ const ReaGraph = () => {
   // }, [selected]);
 
   return (
-    <div className="flex-1 flex flex-col h-full">
+    <div className="flex-1 flex flex-col h-full overflow-auto p-4">
       <div className="flex-1 flex flex-row min-h-[70px] gap-6 items-center bg-slate-100 justify-center transition-all duration-300">
         <div className="flex items-center gap-2">
           <span>Enter Account Number</span>
@@ -82,14 +80,21 @@ const ReaGraph = () => {
         <div className="flex gap-2"></div>
         {/* <button onClick={()=> selectNodePaths(graphData.nodes[0].id, graphData.nodes[1].id)}>click</button> */}
       </div>
-      <div className="flex">
-        <div className="flex flex-1 relative transition-all duration-300">
+      
+        <Transactions tableData={graphData.edges} />
+    
+      <h3 className="flex text-left font-bold bg-white p-2 mt-6">
+      Account Visualization
+      </h3>
+      <div className="flex gap-4 bg-white flex-1">
+        <div className="flex flex-1 relative transition-all duration-300 bg-slate-100">
           {!graphData.nodes?.length ? (
             <div className="flex flex-1 flex-col justify-center items-center">
               <h3>No Accounts found for {selectedAccountNumber}</h3>
             </div>
           ) : (
             <GraphCanvas
+              theme={theme}
               layoutType="hierarchicalLr"
               key={selectedAccountNumber}
               selections={_selections}
@@ -143,16 +148,15 @@ const ReaGraph = () => {
             className="relative"
             style={{
               width,
-              minHeight: window.innerHeight - 70,
-              height: window.innerHeight - 70,
+              minHeight: window.innerHeight - 100,
+              height: window.innerHeight - 100,
             }}
           >
             <div
               className=" p-4 bg-slate-100 transition-all duration-300 overflow-auto "
               style={{
                 width,
-                minHeight: window.innerHeight - 70,
-                height: window.innerHeight - 70,
+                height: "100%",
               }}
             >
               {selected ? (
@@ -249,13 +253,13 @@ const filterGraphData = (selectedAccountNumber, data) => {
 const filterTransactions = (parentId, data) => {
   data = data || DATA;
   if (!parentId) return { nodes: data.nodes, edges: data.edges };
-  
+
   const resultNodes = new Set([parentId]);
   const resultEdges = new Set();
-  const rootNode = data.nodes.find(node => node.id === parentId);
-    if (!rootNode) {
-        throw new Error(`Root node with id ${parentId} not found`);
-    }
+  const rootNode = data.nodes.find((node) => node.id === parentId);
+  if (!rootNode) {
+    throw new Error(`Root node with id ${parentId} not found`);
+  }
 
   const recursiveSearch = (nodeId) => {
     data.edges.forEach((edge) => {
@@ -280,4 +284,58 @@ const filterTransactions = (parentId, data) => {
   };
 };
 
-
+const theme = {
+  canvas: { background: '#f1f5f9' },
+  node: {
+    fill: '#7CA0AB',
+    activeFill: '#1DE9AC',
+    opacity: 1,
+    selectedOpacity: 1,
+    inactiveOpacity: 0.2,
+    label: {
+      color: '#2A6475',
+      stroke: '#fff',
+      activeColor: '#1DE9AC'
+    },
+    subLabel: {
+      color: '#ddd',
+      stroke: 'transparent',
+      activeColor: '#1DE9AC'
+    }
+  },
+  lasso: {
+    border: '1px solid #55aaff',
+    background: 'rgba(75, 160, 255, 0.1)'
+  },
+  ring: {
+    fill: '#D8E6EA',
+    activeFill: '#1DE9AC'
+  },
+  edge: {
+    fill: '#D8E6EA',
+    activeFill: '#1DE9AC',
+    opacity: 1,
+    selectedOpacity: 1,
+    inactiveOpacity: 0.1,
+    label: {
+      stroke: '#fff',
+      color: '#2A6475',
+      activeColor: '#1DE9AC',
+      fontSize: 6
+    }
+  },
+  arrow: {
+    fill: '#D8E6EA',
+    activeFill: '#1DE9AC'
+  },
+  cluster: {
+    stroke: '#D8E6EA',
+    opacity: 1,
+    selectedOpacity: 1,
+    inactiveOpacity: 0.1,
+    label: {
+      stroke: '#fff',
+      color: '#2A6475'
+    }
+  }
+}
