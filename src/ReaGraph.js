@@ -45,38 +45,19 @@ const ReaGraph = () => {
     // graphRef.current?.centerGraph(["2086916253"]);
   }, []);
 
-  const filterGraphData = (selectedAccountNumber, data) => {
-    data = data || DATA;
-    if (!selectedAccountNumber) return { nodes: data.nodes, edges: data.edges };
-
-    const connectedEdges = data.edges.filter(
-      (edge) =>
-        edge.source === selectedAccountNumber ||
-        edge.target === selectedAccountNumber
-    );
-
-    const connectedNodeIds = new Set(
-      connectedEdges.flatMap((edge) => [edge.source, edge.target])
-    );
-
-    const connectedNodes = data.nodes.filter((node) =>
-      connectedNodeIds.has(node.id)
-    );
-
-    return { nodes: connectedNodes, edges: connectedEdges };
-  };
+  
 
   useEffect(() => {
-    const result = filterGraphData(selectedAccountNumber);
+    const result = filterTransactions(selectedAccountNumber);
     setgraphData(result);
   }, [selectedAccountNumber]);
+  console.log('rrrr',graphData);
+
 
   const tableData = useMemo(() => {
-    if (selected) return filterGraphData(selected.id, graphData)?.edges;
+    if (selected) return filterTransactions(selected.id, graphData)?.edges;
     else return [];
   }, [selected, graphData]);
-
-  console.log("rrrr", selections, actives);
 
   // useEffect(() => {
   //   if (selected) {
@@ -86,32 +67,6 @@ const ReaGraph = () => {
   //   }
   // }, [selected]);
 
-  const handlePathFind = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const source = formData.get("source");
-    const target = formData.get("target");
-    if (!source || !target) {
-      alert("Please enter both source and target node IDs");
-      return;
-    }
-    try {
-      const result = bfsPath(graphData, source, target);
-      console.log("ccccc ", [
-        result.path,
-        result.pathEdges?.map((edge) => edge.id),
-      ]);
-      if (result.path) {
-        // clearSelections([source, target]);
-        // setSelections(path)
-        // clearSelections(path);
-        // setInternalActives([
-        //   ...result.path,
-        //   ...result.pathEdges?.map((edge) => edge.id),
-        // ]);
-      }
-    } catch (error) {}
-  };
   return (
     <div className="flex-1 flex flex-col h-full">
       <div className="flex-1 flex flex-row min-h-[70px] gap-6 items-center bg-slate-100 justify-center transition-all duration-300">
@@ -124,9 +79,7 @@ const ReaGraph = () => {
             onChange={(e) => setselectedAccountNumber(e.target.value)}
           />
         </div>
-        <div className="flex gap-2">
-          
-        </div>
+        <div className="flex gap-2"></div>
         {/* <button onClick={()=> selectNodePaths(graphData.nodes[0].id, graphData.nodes[1].id)}>click</button> */}
       </div>
       <div className="flex">
@@ -137,8 +90,8 @@ const ReaGraph = () => {
             </div>
           ) : (
             <GraphCanvas
-            layoutType="hierarchicalLr"
-            key={selectedAccountNumber}
+              layoutType="hierarchicalLr"
+              key={selectedAccountNumber}
               selections={_selections}
               actives={actives}
               ref={graphRef}
@@ -207,8 +160,8 @@ const ReaGraph = () => {
                   <li className="bold text-lg whitespace-nowrap">
                     {selected.label}
                   </li>
-                  {Object.entries(selected.data).map(([key, value]) => (
-                    <li key={key}>
+                  {Object.entries(selected.data).map(([key, value], i) => (
+                    <li key={key + i}>
                       <span className="whitespace-nowrap font-light">
                         {key}:
                       </span>{" "}
@@ -272,58 +225,59 @@ const ReaGraph = () => {
 
 export default ReaGraph;
 
-function buildAdjacencyList(graph) {
-  const adjacencyList = {};
+const filterGraphData = (selectedAccountNumber, data) => {
+  data = data || DATA;
+  if (!selectedAccountNumber) return { nodes: data.nodes, edges: data.edges };
 
-  graph.nodes.forEach((node) => {
-    adjacencyList[node.id] = [];
-  });
+  const connectedEdges = data.edges.filter(
+    (edge) =>
+      edge.source === selectedAccountNumber ||
+      edge.target === selectedAccountNumber
+  );
 
-  graph.edges.forEach((edge) => {
-    adjacencyList[edge.source].push(edge.target);
-    adjacencyList[edge.target].push(edge.source); // If the graph is undirected
-  });
+  const connectedNodeIds = new Set(
+    connectedEdges.flatMap((edge) => [edge.source, edge.target])
+  );
 
-  return adjacencyList;
-}
+  const connectedNodes = data.nodes.filter((node) =>
+    connectedNodeIds.has(node.id)
+  );
 
-// BFS function to find the shortest path
-function bfsPath(graph, startNode, endNode) {
-  const adjacencyList = buildAdjacencyList(graph);
-  const queue = [[startNode]];
-  const visited = new Set();
-  const edgeMap = {};
+  return { nodes: connectedNodes, edges: connectedEdges };
+};
 
-  // Create a map to easily find the edge between two nodes
-  graph.edges.forEach((edge) => {
-    edgeMap[`${edge.source}-${edge.target}`] = edge;
-    edgeMap[`${edge.target}-${edge.source}`] = edge; // If the graph is undirected
-  });
-
-  while (queue.length > 0) {
-    const path = queue.shift();
-    const node = path[path.length - 1];
-
-    if (node === endNode) {
-      // Construct the path edges
-      const pathEdges = [];
-      for (let i = 0; i < path.length - 1; i++) {
-        const edge = edgeMap[`${path[i]}-${path[i + 1]}`];
-        if (edge) pathEdges.push(edge);
-      }
-      return { path, pathEdges };
+const filterTransactions = (parentId, data) => {
+  data = data || DATA;
+  if (!parentId) return { nodes: data.nodes, edges: data.edges };
+  
+  const resultNodes = new Set([parentId]);
+  const resultEdges = new Set();
+  const rootNode = data.nodes.find(node => node.id === parentId);
+    if (!rootNode) {
+        throw new Error(`Root node with id ${parentId} not found`);
     }
 
-    if (!visited.has(node)) {
-      visited.add(node);
-      const neighbors = adjacencyList[node];
-
-      for (const neighbor of neighbors) {
-        const newPath = [...path, neighbor];
-        queue.push(newPath);
+  const recursiveSearch = (nodeId) => {
+    data.edges.forEach((edge) => {
+      if (edge.source === nodeId) {
+        resultEdges.add(edge);
+        const targetNodeId = edge.target;
+        if (!resultNodes.has(targetNodeId)) {
+          resultNodes.add(targetNodeId);
+          recursiveSearch(targetNodeId);
+        }
       }
-    }
-  }
+    });
+  };
 
-  return null; // Return null if no path is found
-}
+  recursiveSearch(parentId);
+
+  return {
+    nodes: Array.from(resultNodes).map((nodeId) =>
+      data.nodes.find((node) => node.id === nodeId)
+    ),
+    edges: Array.from(resultEdges),
+  };
+};
+
+

@@ -4,1060 +4,1046 @@
       "id": "1",
       "label": "User 1",
       "data": {
-        "id": "a4c58ffc-e934-42c2-a4c2-fa65b1a5e85f",
-        "sender_id": "7",
-        "sender_name": "User 7",
-        "receiver_id": "1",
-        "receiver_name": "User 1",
-        "amount": 987.05
+        "id": "f68f3c3f-e436-49e5-a71c-55da4848a88b",
+        "sender_id": "1",
+        "sender_name": "User 1",
+        "receiver_id": "4",
+        "receiver_name": "User 4",
+        "amount": 521.58
       }
     },
     {
       "id": "2",
       "label": "User 2",
       "data": {
-        "id": "83844888-6198-42e6-936c-794cb6c2f87a",
-        "sender_id": "7",
-        "sender_name": "User 7",
+        "id": "846a9a01-1a49-4208-975e-bfcff8a84cce",
+        "sender_id": "6",
+        "sender_name": "User 6",
         "receiver_id": "2",
         "receiver_name": "User 2",
-        "amount": 364.47
+        "amount": 959.49
       }
     },
     {
       "id": "3",
       "label": "User 3",
       "data": {
-        "id": "a1b7c9f1-d568-472d-b07a-4b465bc80cc7",
-        "sender_id": "6",
-        "sender_name": "User 6",
+        "id": "77108823-4aff-4e8f-9284-79aafadfe051",
+        "sender_id": "9",
+        "sender_name": "User 9",
         "receiver_id": "3",
         "receiver_name": "User 3",
-        "amount": 375.89
+        "amount": 820.38
       }
     },
     {
       "id": "4",
       "label": "User 4",
       "data": {
-        "id": "4b0dc8df-1e48-4888-8b3e-5eacd16ac078",
-        "sender_id": "4",
-        "sender_name": "User 4",
-        "receiver_id": "10",
-        "receiver_name": "User 10",
-        "amount": 785.4
+        "id": "f68f3c3f-e436-49e5-a71c-55da4848a88b",
+        "sender_id": "1",
+        "sender_name": "User 1",
+        "receiver_id": "4",
+        "receiver_name": "User 4",
+        "amount": 521.58
       }
     },
     {
       "id": "5",
       "label": "User 5",
       "data": {
-        "id": "28336ea9-32c9-4f52-993f-f5fce810db9c",
-        "sender_id": "5",
-        "sender_name": "User 5",
-        "receiver_id": "9",
-        "receiver_name": "User 9",
-        "amount": 141.89
+        "id": "6afc6281-534a-4e76-86d8-a668a0fe82cf",
+        "sender_id": "6",
+        "sender_name": "User 6",
+        "receiver_id": "5",
+        "receiver_name": "User 5",
+        "amount": 262.99
       }
     },
     {
       "id": "6",
       "label": "User 6",
       "data": {
-        "id": "8bdbde26-4467-4fec-9882-d3d71dacfa7a",
-        "sender_id": "8",
-        "sender_name": "User 8",
-        "receiver_id": "6",
-        "receiver_name": "User 6",
-        "amount": 512.35
+        "id": "846a9a01-1a49-4208-975e-bfcff8a84cce",
+        "sender_id": "6",
+        "sender_name": "User 6",
+        "receiver_id": "2",
+        "receiver_name": "User 2",
+        "amount": 959.49
       }
     },
     {
       "id": "7",
       "label": "User 7",
       "data": {
-        "id": "83844888-6198-42e6-936c-794cb6c2f87a",
+        "id": "5b4fead5-3f43-4c39-8acd-10c5ad4c8fe8",
         "sender_id": "7",
         "sender_name": "User 7",
-        "receiver_id": "2",
-        "receiver_name": "User 2",
-        "amount": 364.47
+        "receiver_id": "6",
+        "receiver_name": "User 6",
+        "amount": 542.52
       }
     },
     {
       "id": "8",
       "label": "User 8",
       "data": {
-        "id": "8bdbde26-4467-4fec-9882-d3d71dacfa7a",
+        "id": "8233ef3c-bfbf-4708-8b23-aefa0abc9a77",
         "sender_id": "8",
         "sender_name": "User 8",
         "receiver_id": "6",
         "receiver_name": "User 6",
-        "amount": 512.35
+        "amount": 452.07
       }
     },
     {
       "id": "9",
       "label": "User 9",
       "data": {
-        "id": "28336ea9-32c9-4f52-993f-f5fce810db9c",
-        "sender_id": "5",
-        "sender_name": "User 5",
-        "receiver_id": "9",
-        "receiver_name": "User 9",
-        "amount": 141.89
+        "id": "77108823-4aff-4e8f-9284-79aafadfe051",
+        "sender_id": "9",
+        "sender_name": "User 9",
+        "receiver_id": "3",
+        "receiver_name": "User 3",
+        "amount": 820.38
       }
     },
     {
       "id": "10",
       "label": "User 10",
       "data": {
-        "id": "4b0dc8df-1e48-4888-8b3e-5eacd16ac078",
-        "sender_id": "4",
-        "sender_name": "User 4",
+        "id": "8f9cabc0-9845-4b83-9093-c9bcbcf21358",
+        "sender_id": "2",
+        "sender_name": "User 2",
         "receiver_id": "10",
         "receiver_name": "User 10",
-        "amount": 785.4
+        "amount": 770.88
       }
     }
   ],
   "edges": [
     {
-      "source": "5",
-      "target": "9",
-      "id": "5-9",
-      "label": "Amount: 141.89",
-      "amount": 141.89,
-      "data": {
-        "source": "5",
-        "target": "9",
-        "id": "5-9",
-        "label": "Amount: 141.89",
-        "amount": 141.89
-      }
-    },
-    {
-      "source": "7",
+      "source": "6",
       "target": "2",
-      "id": "7-2",
-      "label": "Amount: 756.59",
-      "amount": 756.59,
+      "id": "6-2",
+      "label": "Amount: 959.49",
+      "amount": 959.49,
       "data": {
-        "source": "7",
+        "source": "6",
         "target": "2",
-        "id": "7-2",
-        "label": "Amount: 364.47",
-        "amount": 756.59
-      }
-    },
-    {
-      "source": "8",
-      "target": "6",
-      "id": "8-6",
-      "label": "Amount: 512.35",
-      "amount": 512.35,
-      "data": {
-        "source": "8",
-        "target": "6",
-        "id": "8-6",
-        "label": "Amount: 512.35",
-        "amount": 512.35
-      }
-    },
-    {
-      "source": "7",
-      "target": "1",
-      "id": "7-1",
-      "label": "Amount: 1764.62",
-      "amount": 1764.62,
-      "data": {
-        "source": "7",
-        "target": "1",
-        "id": "7-1",
-        "label": "Amount: 987.05",
-        "amount": 1764.62
-      }
-    },
-    {
-      "source": "6",
-      "target": "3",
-      "id": "6-3",
-      "label": "Amount: 1280.50",
-      "amount": 1280.5,
-      "data": {
-        "source": "6",
-        "target": "3",
-        "id": "6-3",
-        "label": "Amount: 375.89",
-        "amount": 1280.5
-      }
-    },
-    {
-      "source": "4",
-      "target": "10",
-      "id": "4-10",
-      "label": "Amount: 1641.24",
-      "amount": 1641.24,
-      "data": {
-        "source": "4",
-        "target": "10",
-        "id": "4-10",
-        "label": "Amount: 785.4",
-        "amount": 1641.24
-      }
-    },
-    {
-      "source": "10",
-      "target": "7",
-      "id": "10-7",
-      "label": "Amount: 926.90",
-      "amount": 926.9000000000001,
-      "data": {
-        "source": "10",
-        "target": "7",
-        "id": "10-7",
-        "label": "Amount: 705.7",
-        "amount": 926.9000000000001
-      }
-    },
-    {
-      "source": "2",
-      "target": "9",
-      "id": "2-9",
-      "label": "Amount: 1042.54",
-      "amount": 1042.54,
-      "data": {
-        "source": "2",
-        "target": "9",
-        "id": "2-9",
-        "label": "Amount: 279.08",
-        "amount": 1042.54
-      }
-    },
-    {
-      "source": "3",
-      "target": "9",
-      "id": "3-9",
-      "label": "Amount: 481.36",
-      "amount": 481.36,
-      "data": {
-        "source": "3",
-        "target": "9",
-        "id": "3-9",
-        "label": "Amount: 322.78",
-        "amount": 481.36
-      }
-    },
-    {
-      "source": "2",
-      "target": "6",
-      "id": "2-6",
-      "label": "Amount: 54.22",
-      "amount": 54.22,
-      "data": {
-        "source": "2",
-        "target": "6",
-        "id": "2-6",
-        "label": "Amount: 54.22",
-        "amount": 54.22
-      }
-    },
-    {
-      "source": "6",
-      "target": "10",
-      "id": "6-10",
-      "label": "Amount: 209.51",
-      "amount": 209.51,
-      "data": {
-        "source": "6",
-        "target": "10",
-        "id": "6-10",
-        "label": "Amount: 209.51",
-        "amount": 209.51
-      }
-    },
-    {
-      "source": "1",
-      "target": "1",
-      "id": "1-1",
-      "label": "Amount: 149.29",
-      "amount": 149.29,
-      "data": {
-        "source": "1",
-        "target": "1",
-        "id": "1-1",
-        "label": "Amount: 149.29",
-        "amount": 149.29
-      }
-    },
-    {
-      "source": "5",
-      "target": "5",
-      "id": "5-5",
-      "label": "Amount: 1179.91",
-      "amount": 1179.91,
-      "data": {
-        "source": "5",
-        "target": "5",
-        "id": "5-5",
-        "label": "Amount: 289.57",
-        "amount": 1179.91
-      }
-    },
-    {
-      "source": "6",
-      "target": "7",
-      "id": "6-7",
-      "label": "Amount: 724.03",
-      "amount": 724.03,
-      "data": {
-        "source": "6",
-        "target": "7",
-        "id": "6-7",
-        "label": "Amount: 722.66",
-        "amount": 724.03
-      }
-    },
-    {
-      "source": "9",
-      "target": "1",
-      "id": "9-1",
-      "label": "Amount: 1445.28",
-      "amount": 1445.2799999999997,
-      "data": {
-        "source": "9",
-        "target": "1",
-        "id": "9-1",
-        "label": "Amount: 411.71",
-        "amount": 1445.2799999999997
+        "id": "6-2",
+        "label": "Amount: 959.49",
+        "amount": 959.49
       }
     },
     {
       "source": "9",
       "target": "3",
       "id": "9-3",
-      "label": "Amount: 1624.01",
-      "amount": 1624.01,
+      "label": "Amount: 820.38",
+      "amount": 820.38,
       "data": {
         "source": "9",
         "target": "3",
         "id": "9-3",
-        "label": "Amount: 777.8",
-        "amount": 1624.01
-      }
-    },
-    {
-      "source": "3",
-      "target": "6",
-      "id": "3-6",
-      "label": "Amount: 2325.82",
-      "amount": 2325.8199999999997,
-      "data": {
-        "source": "3",
-        "target": "6",
-        "id": "3-6",
-        "label": "Amount: 997.72",
-        "amount": 2325.8199999999997
-      }
-    },
-    {
-      "source": "10",
-      "target": "8",
-      "id": "10-8",
-      "label": "Amount: 872.95",
-      "amount": 872.95,
-      "data": {
-        "source": "10",
-        "target": "8",
-        "id": "10-8",
-        "label": "Amount: 872.95",
-        "amount": 872.95
-      }
-    },
-    {
-      "source": "5",
-      "target": "8",
-      "id": "5-8",
-      "label": "Amount: 2530.01",
-      "amount": 2530.01,
-      "data": {
-        "source": "5",
-        "target": "8",
-        "id": "5-8",
-        "label": "Amount: 565.11",
-        "amount": 2530.01
-      }
-    },
-    {
-      "source": "2",
-      "target": "3",
-      "id": "2-3",
-      "label": "Amount: 1508.33",
-      "amount": 1508.33,
-      "data": {
-        "source": "2",
-        "target": "3",
-        "id": "2-3",
-        "label": "Amount: 138.57",
-        "amount": 1508.33
-      }
-    },
-    {
-      "source": "3",
-      "target": "8",
-      "id": "3-8",
-      "label": "Amount: 1372.95",
-      "amount": 1372.95,
-      "data": {
-        "source": "3",
-        "target": "8",
-        "id": "3-8",
-        "label": "Amount: 376.3",
-        "amount": 1372.95
-      }
-    },
-    {
-      "source": "9",
-      "target": "9",
-      "id": "9-9",
-      "label": "Amount: 338.61",
-      "amount": 338.61,
-      "data": {
-        "source": "9",
-        "target": "9",
-        "id": "9-9",
-        "label": "Amount: 338.61",
-        "amount": 338.61
-      }
-    },
-    {
-      "source": "8",
-      "target": "9",
-      "id": "8-9",
-      "label": "Amount: 352.32",
-      "amount": 352.32,
-      "data": {
-        "source": "8",
-        "target": "9",
-        "id": "8-9",
-        "label": "Amount: 352.32",
-        "amount": 352.32
-      }
-    },
-    {
-      "source": "3",
-      "target": "10",
-      "id": "3-10",
-      "label": "Amount: 879.47",
-      "amount": 879.47,
-      "data": {
-        "source": "3",
-        "target": "10",
-        "id": "3-10",
-        "label": "Amount: 879.47",
-        "amount": 879.47
-      }
-    },
-    {
-      "source": "1",
-      "target": "8",
-      "id": "1-8",
-      "label": "Amount: 575.47",
-      "amount": 575.47,
-      "data": {
-        "source": "1",
-        "target": "8",
-        "id": "1-8",
-        "label": "Amount: 575.47",
-        "amount": 575.47
-      }
-    },
-    {
-      "source": "1",
-      "target": "2",
-      "id": "1-2",
-      "label": "Amount: 818.84",
-      "amount": 818.84,
-      "data": {
-        "source": "1",
-        "target": "2",
-        "id": "1-2",
-        "label": "Amount: 818.84",
-        "amount": 818.84
-      }
-    },
-    {
-      "source": "9",
-      "target": "6",
-      "id": "9-6",
-      "label": "Amount: 895.06",
-      "amount": 895.06,
-      "data": {
-        "source": "9",
-        "target": "6",
-        "id": "9-6",
-        "label": "Amount: 895.06",
-        "amount": 895.06
-      }
-    },
-    {
-      "source": "4",
-      "target": "4",
-      "id": "4-4",
-      "label": "Amount: 594.71",
-      "amount": 594.71,
-      "data": {
-        "source": "4",
-        "target": "4",
-        "id": "4-4",
-        "label": "Amount: 594.71",
-        "amount": 594.71
-      }
-    },
-    {
-      "source": "3",
-      "target": "3",
-      "id": "3-3",
-      "label": "Amount: 563.47",
-      "amount": 563.47,
-      "data": {
-        "source": "3",
-        "target": "3",
-        "id": "3-3",
-        "label": "Amount: 563.47",
-        "amount": 563.47
-      }
-    },
-    {
-      "source": "3",
-      "target": "1",
-      "id": "3-1",
-      "label": "Amount: 732.88",
-      "amount": 732.88,
-      "data": {
-        "source": "3",
-        "target": "1",
-        "id": "3-1",
-        "label": "Amount: 12.52",
-        "amount": 732.88
-      }
-    },
-    {
-      "source": "8",
-      "target": "1",
-      "id": "8-1",
-      "label": "Amount: 896.84",
-      "amount": 896.84,
-      "data": {
-        "source": "8",
-        "target": "1",
-        "id": "8-1",
-        "label": "Amount: 292.79",
-        "amount": 896.84
-      }
-    },
-    {
-      "source": "8",
-      "target": "8",
-      "id": "8-8",
-      "label": "Amount: 669.74",
-      "amount": 669.74,
-      "data": {
-        "source": "8",
-        "target": "8",
-        "id": "8-8",
-        "label": "Amount: 669.74",
-        "amount": 669.74
-      }
-    },
-    {
-      "source": "1",
-      "target": "7",
-      "id": "1-7",
-      "label": "Amount: 542.25",
-      "amount": 542.25,
-      "data": {
-        "source": "1",
-        "target": "7",
-        "id": "1-7",
-        "label": "Amount: 136.59",
-        "amount": 542.25
-      }
-    },
-    {
-      "source": "6",
-      "target": "9",
-      "id": "6-9",
-      "label": "Amount: 488.59",
-      "amount": 488.59000000000003,
-      "data": {
-        "source": "6",
-        "target": "9",
-        "id": "6-9",
-        "label": "Amount: 181.1",
-        "amount": 488.59000000000003
-      }
-    },
-    {
-      "source": "1",
-      "target": "6",
-      "id": "1-6",
-      "label": "Amount: 255.64",
-      "amount": 255.64,
-      "data": {
-        "source": "1",
-        "target": "6",
-        "id": "1-6",
-        "label": "Amount: 255.64",
-        "amount": 255.64
-      }
-    },
-    {
-      "source": "2",
-      "target": "5",
-      "id": "2-5",
-      "label": "Amount: 79.33",
-      "amount": 79.33,
-      "data": {
-        "source": "2",
-        "target": "5",
-        "id": "2-5",
-        "label": "Amount: 79.33",
-        "amount": 79.33
-      }
-    },
-    {
-      "source": "5",
-      "target": "4",
-      "id": "5-4",
-      "label": "Amount: 1058.54",
-      "amount": 1058.54,
-      "data": {
-        "source": "5",
-        "target": "4",
-        "id": "5-4",
-        "label": "Amount: 821.63",
-        "amount": 1058.54
-      }
-    },
-    {
-      "source": "4",
-      "target": "6",
-      "id": "4-6",
-      "label": "Amount: 431.39",
-      "amount": 431.39,
-      "data": {
-        "source": "4",
-        "target": "6",
-        "id": "4-6",
-        "label": "Amount: 431.39",
-        "amount": 431.39
-      }
-    },
-    {
-      "source": "9",
-      "target": "2",
-      "id": "9-2",
-      "label": "Amount: 1169.95",
-      "amount": 1169.95,
-      "data": {
-        "source": "9",
-        "target": "2",
-        "id": "9-2",
-        "label": "Amount: 804.48",
-        "amount": 1169.95
-      }
-    },
-    {
-      "source": "4",
-      "target": "8",
-      "id": "4-8",
-      "label": "Amount: 325.45",
-      "amount": 325.45,
-      "data": {
-        "source": "4",
-        "target": "8",
-        "id": "4-8",
-        "label": "Amount: 325.45",
-        "amount": 325.45
-      }
-    },
-    {
-      "source": "7",
-      "target": "6",
-      "id": "7-6",
-      "label": "Amount: 345.94",
-      "amount": 345.94,
-      "data": {
-        "source": "7",
-        "target": "6",
-        "id": "7-6",
-        "label": "Amount: 345.94",
-        "amount": 345.94
-      }
-    },
-    {
-      "source": "5",
-      "target": "3",
-      "id": "5-3",
-      "label": "Amount: 1418.06",
-      "amount": 1418.06,
-      "data": {
-        "source": "5",
-        "target": "3",
-        "id": "5-3",
-        "label": "Amount: 747.51",
-        "amount": 1418.06
-      }
-    },
-    {
-      "source": "9",
-      "target": "10",
-      "id": "9-10",
-      "label": "Amount: 893.22",
-      "amount": 893.22,
-      "data": {
-        "source": "9",
-        "target": "10",
-        "id": "9-10",
-        "label": "Amount: 893.22",
-        "amount": 893.22
-      }
-    },
-    {
-      "source": "4",
-      "target": "3",
-      "id": "4-3",
-      "label": "Amount: 420.25",
-      "amount": 420.25,
-      "data": {
-        "source": "4",
-        "target": "3",
-        "id": "4-3",
-        "label": "Amount: 420.25",
-        "amount": 420.25
-      }
-    },
-    {
-      "source": "2",
-      "target": "8",
-      "id": "2-8",
-      "label": "Amount: 959.59",
-      "amount": 959.59,
-      "data": {
-        "source": "2",
-        "target": "8",
-        "id": "2-8",
-        "label": "Amount: 959.59",
-        "amount": 959.59
-      }
-    },
-    {
-      "source": "2",
-      "target": "4",
-      "id": "2-4",
-      "label": "Amount: 60.45",
-      "amount": 60.45,
-      "data": {
-        "source": "2",
-        "target": "4",
-        "id": "2-4",
-        "label": "Amount: 60.45",
-        "amount": 60.45
-      }
-    },
-    {
-      "source": "6",
-      "target": "8",
-      "id": "6-8",
-      "label": "Amount: 836.87",
-      "amount": 836.8699999999999,
-      "data": {
-        "source": "6",
-        "target": "8",
-        "id": "6-8",
-        "label": "Amount: 781.31",
-        "amount": 836.8699999999999
-      }
-    },
-    {
-      "source": "9",
-      "target": "7",
-      "id": "9-7",
-      "label": "Amount: 712.15",
-      "amount": 712.15,
-      "data": {
-        "source": "9",
-        "target": "7",
-        "id": "9-7",
-        "label": "Amount: 712.15",
-        "amount": 712.15
-      }
-    },
-    {
-      "source": "8",
-      "target": "2",
-      "id": "8-2",
-      "label": "Amount: 86.69",
-      "amount": 86.69,
-      "data": {
-        "source": "8",
-        "target": "2",
-        "id": "8-2",
-        "label": "Amount: 86.69",
-        "amount": 86.69
-      }
-    },
-    {
-      "source": "5",
-      "target": "2",
-      "id": "5-2",
-      "label": "Amount: 220.31",
-      "amount": 220.31,
-      "data": {
-        "source": "5",
-        "target": "2",
-        "id": "5-2",
-        "label": "Amount: 220.31",
-        "amount": 220.31
-      }
-    },
-    {
-      "source": "4",
-      "target": "9",
-      "id": "4-9",
-      "label": "Amount: 915.11",
-      "amount": 915.11,
-      "data": {
-        "source": "4",
-        "target": "9",
-        "id": "4-9",
-        "label": "Amount: 915.11",
-        "amount": 915.11
-      }
-    },
-    {
-      "source": "10",
-      "target": "9",
-      "id": "10-9",
-      "label": "Amount: 320.07",
-      "amount": 320.07,
-      "data": {
-        "source": "10",
-        "target": "9",
-        "id": "10-9",
-        "label": "Amount: 320.07",
-        "amount": 320.07
+        "label": "Amount: 820.38",
+        "amount": 820.38
       }
     },
     {
       "source": "2",
       "target": "10",
       "id": "2-10",
-      "label": "Amount: 1475.59",
-      "amount": 1475.5900000000001,
+      "label": "Amount: 1844.30",
+      "amount": 1844.3,
       "data": {
         "source": "2",
         "target": "10",
         "id": "2-10",
-        "label": "Amount: 602.94",
-        "amount": 1475.5900000000001
+        "label": "Amount: 770.88",
+        "amount": 1844.3
       }
     },
     {
       "source": "7",
-      "target": "9",
-      "id": "7-9",
-      "label": "Amount: 944.44",
-      "amount": 944.44,
+      "target": "6",
+      "id": "7-6",
+      "label": "Amount: 542.52",
+      "amount": 542.52,
       "data": {
         "source": "7",
-        "target": "9",
-        "id": "7-9",
-        "label": "Amount: 944.44",
-        "amount": 944.44
+        "target": "6",
+        "id": "7-6",
+        "label": "Amount: 542.52",
+        "amount": 542.52
       }
     },
     {
-      "source": "4",
-      "target": "2",
-      "id": "4-2",
-      "label": "Amount: 608.67",
-      "amount": 608.67,
-      "data": {
-        "source": "4",
-        "target": "2",
-        "id": "4-2",
-        "label": "Amount: 608.67",
-        "amount": 608.67
-      }
-    },
-    {
-      "source": "10",
-      "target": "3",
-      "id": "10-3",
-      "label": "Amount: 498.78",
-      "amount": 498.78,
-      "data": {
-        "source": "10",
-        "target": "3",
-        "id": "10-3",
-        "label": "Amount: 498.78",
-        "amount": 498.78
-      }
-    },
-    {
-      "source": "4",
+      "source": "6",
       "target": "5",
-      "id": "4-5",
-      "label": "Amount: 1351.83",
-      "amount": 1351.83,
+      "id": "6-5",
+      "label": "Amount: 1897.95",
+      "amount": 1897.95,
       "data": {
-        "source": "4",
+        "source": "6",
         "target": "5",
-        "id": "4-5",
-        "label": "Amount: 447.79",
-        "amount": 1351.83
-      }
-    },
-    {
-      "source": "2",
-      "target": "2",
-      "id": "2-2",
-      "label": "Amount: 118.13",
-      "amount": 118.13,
-      "data": {
-        "source": "2",
-        "target": "2",
-        "id": "2-2",
-        "label": "Amount: 118.13",
-        "amount": 118.13
-      }
-    },
-    {
-      "source": "10",
-      "target": "4",
-      "id": "10-4",
-      "label": "Amount: 435.77",
-      "amount": 435.77,
-      "data": {
-        "source": "10",
-        "target": "4",
-        "id": "10-4",
-        "label": "Amount: 435.77",
-        "amount": 435.77
-      }
-    },
-    {
-      "source": "8",
-      "target": "7",
-      "id": "8-7",
-      "label": "Amount: 742.67",
-      "amount": 742.67,
-      "data": {
-        "source": "8",
-        "target": "7",
-        "id": "8-7",
-        "label": "Amount: 742.67",
-        "amount": 742.67
-      }
-    },
-    {
-      "source": "3",
-      "target": "7",
-      "id": "3-7",
-      "label": "Amount: 912.51",
-      "amount": 912.51,
-      "data": {
-        "source": "3",
-        "target": "7",
-        "id": "3-7",
-        "label": "Amount: 912.51",
-        "amount": 912.51
-      }
-    },
-    {
-      "source": "3",
-      "target": "2",
-      "id": "3-2",
-      "label": "Amount: 416.32",
-      "amount": 416.32,
-      "data": {
-        "source": "3",
-        "target": "2",
-        "id": "3-2",
-        "label": "Amount: 416.32",
-        "amount": 416.32
-      }
-    },
-    {
-      "source": "7",
-      "target": "3",
-      "id": "7-3",
-      "label": "Amount: 927.79",
-      "amount": 927.79,
-      "data": {
-        "source": "7",
-        "target": "3",
-        "id": "7-3",
-        "label": "Amount: 927.79",
-        "amount": 927.79
-      }
-    },
-    {
-      "source": "10",
-      "target": "10",
-      "id": "10-10",
-      "label": "Amount: 80.85",
-      "amount": 80.85,
-      "data": {
-        "source": "10",
-        "target": "10",
-        "id": "10-10",
-        "label": "Amount: 80.85",
-        "amount": 80.85
+        "id": "6-5",
+        "label": "Amount: 262.99",
+        "amount": 1897.95
       }
     },
     {
       "source": "1",
       "target": "4",
       "id": "1-4",
-      "label": "Amount: 257.64",
-      "amount": 257.64,
+      "label": "Amount: 521.58",
+      "amount": 521.58,
       "data": {
         "source": "1",
         "target": "4",
         "id": "1-4",
-        "label": "Amount: 257.64",
-        "amount": 257.64
+        "label": "Amount: 521.58",
+        "amount": 521.58
+      }
+    },
+    {
+      "source": "9",
+      "target": "2",
+      "id": "9-2",
+      "label": "Amount: 1709.86",
+      "amount": 1709.86,
+      "data": {
+        "source": "9",
+        "target": "2",
+        "id": "9-2",
+        "label": "Amount: 834.89",
+        "amount": 1709.86
       }
     },
     {
       "source": "5",
       "target": "7",
       "id": "5-7",
-      "label": "Amount: 920.39",
-      "amount": 920.39,
+      "label": "Amount: 741.56",
+      "amount": 741.56,
       "data": {
         "source": "5",
         "target": "7",
         "id": "5-7",
-        "label": "Amount: 920.39",
-        "amount": 920.39
+        "label": "Amount: 741.56",
+        "amount": 741.56
+      }
+    },
+    {
+      "source": "8",
+      "target": "6",
+      "id": "8-6",
+      "label": "Amount: 452.07",
+      "amount": 452.07,
+      "data": {
+        "source": "8",
+        "target": "6",
+        "id": "8-6",
+        "label": "Amount: 452.07",
+        "amount": 452.07
+      }
+    },
+    {
+      "source": "8",
+      "target": "3",
+      "id": "8-3",
+      "label": "Amount: 640.04",
+      "amount": 640.04,
+      "data": {
+        "source": "8",
+        "target": "3",
+        "id": "8-3",
+        "label": "Amount: 283.91",
+        "amount": 640.04
+      }
+    },
+    {
+      "source": "1",
+      "target": "1",
+      "id": "1-1",
+      "label": "Amount: 363.06",
+      "amount": 363.06,
+      "data": {
+        "source": "1",
+        "target": "1",
+        "id": "1-1",
+        "label": "Amount: 339.5",
+        "amount": 363.06
+      }
+    },
+    {
+      "source": "3",
+      "target": "2",
+      "id": "3-2",
+      "label": "Amount: 1072.20",
+      "amount": 1072.2,
+      "data": {
+        "source": "3",
+        "target": "2",
+        "id": "3-2",
+        "label": "Amount: 847.49",
+        "amount": 1072.2
+      }
+    },
+    {
+      "source": "4",
+      "target": "3",
+      "id": "4-3",
+      "label": "Amount: 403.80",
+      "amount": 403.8,
+      "data": {
+        "source": "4",
+        "target": "3",
+        "id": "4-3",
+        "label": "Amount: 403.8",
+        "amount": 403.8
+      }
+    },
+    {
+      "source": "5",
+      "target": "4",
+      "id": "5-4",
+      "label": "Amount: 13.95",
+      "amount": 13.95,
+      "data": {
+        "source": "5",
+        "target": "4",
+        "id": "5-4",
+        "label": "Amount: 13.95",
+        "amount": 13.95
+      }
+    },
+    {
+      "source": "4",
+      "target": "9",
+      "id": "4-9",
+      "label": "Amount: 115.17",
+      "amount": 115.17,
+      "data": {
+        "source": "4",
+        "target": "9",
+        "id": "4-9",
+        "label": "Amount: 115.17",
+        "amount": 115.17
+      }
+    },
+    {
+      "source": "10",
+      "target": "2",
+      "id": "10-2",
+      "label": "Amount: 2526.50",
+      "amount": 2526.5,
+      "data": {
+        "source": "10",
+        "target": "2",
+        "id": "10-2",
+        "label": "Amount: 684.77",
+        "amount": 2526.5
+      }
+    },
+    {
+      "source": "1",
+      "target": "2",
+      "id": "1-2",
+      "label": "Amount: 996.58",
+      "amount": 996.58,
+      "data": {
+        "source": "1",
+        "target": "2",
+        "id": "1-2",
+        "label": "Amount: 73.35",
+        "amount": 996.58
+      }
+    },
+    {
+      "source": "6",
+      "target": "9",
+      "id": "6-9",
+      "label": "Amount: 712.89",
+      "amount": 712.89,
+      "data": {
+        "source": "6",
+        "target": "9",
+        "id": "6-9",
+        "label": "Amount: 712.89",
+        "amount": 712.89
+      }
+    },
+    {
+      "source": "3",
+      "target": "8",
+      "id": "3-8",
+      "label": "Amount: 1325.70",
+      "amount": 1325.7,
+      "data": {
+        "source": "3",
+        "target": "8",
+        "id": "3-8",
+        "label": "Amount: 391.56",
+        "amount": 1325.7
+      }
+    },
+    {
+      "source": "1",
+      "target": "9",
+      "id": "1-9",
+      "label": "Amount: 676.41",
+      "amount": 676.41,
+      "data": {
+        "source": "1",
+        "target": "9",
+        "id": "1-9",
+        "label": "Amount: 205.14",
+        "amount": 676.41
+      }
+    },
+    {
+      "source": "9",
+      "target": "9",
+      "id": "9-9",
+      "label": "Amount: 16.98",
+      "amount": 16.98,
+      "data": {
+        "source": "9",
+        "target": "9",
+        "id": "9-9",
+        "label": "Amount: 16.98",
+        "amount": 16.98
+      }
+    },
+    {
+      "source": "6",
+      "target": "1",
+      "id": "6-1",
+      "label": "Amount: 1101.32",
+      "amount": 1101.32,
+      "data": {
+        "source": "6",
+        "target": "1",
+        "id": "6-1",
+        "label": "Amount: 116.31",
+        "amount": 1101.32
+      }
+    },
+    {
+      "source": "7",
+      "target": "9",
+      "id": "7-9",
+      "label": "Amount: 796.06",
+      "amount": 796.06,
+      "data": {
+        "source": "7",
+        "target": "9",
+        "id": "7-9",
+        "label": "Amount: 581.13",
+        "amount": 796.06
+      }
+    },
+    {
+      "source": "1",
+      "target": "8",
+      "id": "1-8",
+      "label": "Amount: 126.29",
+      "amount": 126.29,
+      "data": {
+        "source": "1",
+        "target": "8",
+        "id": "1-8",
+        "label": "Amount: 126.29",
+        "amount": 126.29
       }
     },
     {
       "source": "7",
       "target": "4",
       "id": "7-4",
-      "label": "Amount: 943.55",
-      "amount": 943.55,
+      "label": "Amount: 1591.78",
+      "amount": 1591.78,
       "data": {
         "source": "7",
         "target": "4",
         "id": "7-4",
-        "label": "Amount: 943.55",
-        "amount": 943.55
+        "label": "Amount: 766.8",
+        "amount": 1591.78
+      }
+    },
+    {
+      "source": "3",
+      "target": "4",
+      "id": "3-4",
+      "label": "Amount: 981.38",
+      "amount": 981.38,
+      "data": {
+        "source": "3",
+        "target": "4",
+        "id": "3-4",
+        "label": "Amount: 981.38",
+        "amount": 981.38
+      }
+    },
+    {
+      "source": "8",
+      "target": "8",
+      "id": "8-8",
+      "label": "Amount: 1569.15",
+      "amount": 1569.15,
+      "data": {
+        "source": "8",
+        "target": "8",
+        "id": "8-8",
+        "label": "Amount: 890.5",
+        "amount": 1569.15
+      }
+    },
+    {
+      "source": "7",
+      "target": "5",
+      "id": "7-5",
+      "label": "Amount: 133.16",
+      "amount": 133.16,
+      "data": {
+        "source": "7",
+        "target": "5",
+        "id": "7-5",
+        "label": "Amount: 133.16",
+        "amount": 133.16
+      }
+    },
+    {
+      "source": "3",
+      "target": "1",
+      "id": "3-1",
+      "label": "Amount: 282.03",
+      "amount": 282.03,
+      "data": {
+        "source": "3",
+        "target": "1",
+        "id": "3-1",
+        "label": "Amount: 282.03",
+        "amount": 282.03
+      }
+    },
+    {
+      "source": "1",
+      "target": "6",
+      "id": "1-6",
+      "label": "Amount: 1049.37",
+      "amount": 1049.3700000000001,
+      "data": {
+        "source": "1",
+        "target": "6",
+        "id": "1-6",
+        "label": "Amount: 906.47",
+        "amount": 1049.3700000000001
+      }
+    },
+    {
+      "source": "1",
+      "target": "5",
+      "id": "1-5",
+      "label": "Amount: 1301.12",
+      "amount": 1301.12,
+      "data": {
+        "source": "1",
+        "target": "5",
+        "id": "1-5",
+        "label": "Amount: 722.84",
+        "amount": 1301.12
+      }
+    },
+    {
+      "source": "8",
+      "target": "9",
+      "id": "8-9",
+      "label": "Amount: 1586.85",
+      "amount": 1586.85,
+      "data": {
+        "source": "8",
+        "target": "9",
+        "id": "8-9",
+        "label": "Amount: 479.59",
+        "amount": 1586.85
+      }
+    },
+    {
+      "source": "8",
+      "target": "4",
+      "id": "8-4",
+      "label": "Amount: 132.36",
+      "amount": 132.36,
+      "data": {
+        "source": "8",
+        "target": "4",
+        "id": "8-4",
+        "label": "Amount: 132.36",
+        "amount": 132.36
+      }
+    },
+    {
+      "source": "3",
+      "target": "9",
+      "id": "3-9",
+      "label": "Amount: 1219.78",
+      "amount": 1219.78,
+      "data": {
+        "source": "3",
+        "target": "9",
+        "id": "3-9",
+        "label": "Amount: 880.37",
+        "amount": 1219.78
+      }
+    },
+    {
+      "source": "9",
+      "target": "4",
+      "id": "9-4",
+      "label": "Amount: 805.07",
+      "amount": 805.07,
+      "data": {
+        "source": "9",
+        "target": "4",
+        "id": "9-4",
+        "label": "Amount: 805.07",
+        "amount": 805.07
+      }
+    },
+    {
+      "source": "5",
+      "target": "10",
+      "id": "5-10",
+      "label": "Amount: 941.06",
+      "amount": 941.06,
+      "data": {
+        "source": "5",
+        "target": "10",
+        "id": "5-10",
+        "label": "Amount: 941.06",
+        "amount": 941.06
+      }
+    },
+    {
+      "source": "3",
+      "target": "5",
+      "id": "3-5",
+      "label": "Amount: 344.72",
+      "amount": 344.72,
+      "data": {
+        "source": "3",
+        "target": "5",
+        "id": "3-5",
+        "label": "Amount: 344.72",
+        "amount": 344.72
+      }
+    },
+    {
+      "source": "3",
+      "target": "10",
+      "id": "3-10",
+      "label": "Amount: 940.44",
+      "amount": 940.4399999999999,
+      "data": {
+        "source": "3",
+        "target": "10",
+        "id": "3-10",
+        "label": "Amount: 71.04",
+        "amount": 940.4399999999999
+      }
+    },
+    {
+      "source": "8",
+      "target": "10",
+      "id": "8-10",
+      "label": "Amount: 374.75",
+      "amount": 374.75,
+      "data": {
+        "source": "8",
+        "target": "10",
+        "id": "8-10",
+        "label": "Amount: 374.75",
+        "amount": 374.75
+      }
+    },
+    {
+      "source": "6",
+      "target": "4",
+      "id": "6-4",
+      "label": "Amount: 1178.37",
+      "amount": 1178.37,
+      "data": {
+        "source": "6",
+        "target": "4",
+        "id": "6-4",
+        "label": "Amount: 363.97",
+        "amount": 1178.37
+      }
+    },
+    {
+      "source": "10",
+      "target": "8",
+      "id": "10-8",
+      "label": "Amount: 905.56",
+      "amount": 905.56,
+      "data": {
+        "source": "10",
+        "target": "8",
+        "id": "10-8",
+        "label": "Amount: 905.56",
+        "amount": 905.56
+      }
+    },
+    {
+      "source": "6",
+      "target": "8",
+      "id": "6-8",
+      "label": "Amount: 856.35",
+      "amount": 856.35,
+      "data": {
+        "source": "6",
+        "target": "8",
+        "id": "6-8",
+        "label": "Amount: 856.35",
+        "amount": 856.35
+      }
+    },
+    {
+      "source": "4",
+      "target": "8",
+      "id": "4-8",
+      "label": "Amount: 552.81",
+      "amount": 552.81,
+      "data": {
+        "source": "4",
+        "target": "8",
+        "id": "4-8",
+        "label": "Amount: 552.81",
+        "amount": 552.81
+      }
+    },
+    {
+      "source": "8",
+      "target": "1",
+      "id": "8-1",
+      "label": "Amount: 456.22",
+      "amount": 456.22,
+      "data": {
+        "source": "8",
+        "target": "1",
+        "id": "8-1",
+        "label": "Amount: 456.22",
+        "amount": 456.22
+      }
+    },
+    {
+      "source": "10",
+      "target": "3",
+      "id": "10-3",
+      "label": "Amount: 1611.59",
+      "amount": 1611.59,
+      "data": {
+        "source": "10",
+        "target": "3",
+        "id": "10-3",
+        "label": "Amount: 773.78",
+        "amount": 1611.59
+      }
+    },
+    {
+      "source": "9",
+      "target": "1",
+      "id": "9-1",
+      "label": "Amount: 397.34",
+      "amount": 397.34,
+      "data": {
+        "source": "9",
+        "target": "1",
+        "id": "9-1",
+        "label": "Amount: 397.34",
+        "amount": 397.34
+      }
+    },
+    {
+      "source": "4",
+      "target": "5",
+      "id": "4-5",
+      "label": "Amount: 1502.27",
+      "amount": 1502.27,
+      "data": {
+        "source": "4",
+        "target": "5",
+        "id": "4-5",
+        "label": "Amount: 698.31",
+        "amount": 1502.27
+      }
+    },
+    {
+      "source": "10",
+      "target": "10",
+      "id": "10-10",
+      "label": "Amount: 537.57",
+      "amount": 537.57,
+      "data": {
+        "source": "10",
+        "target": "10",
+        "id": "10-10",
+        "label": "Amount: 537.57",
+        "amount": 537.57
+      }
+    },
+    {
+      "source": "1",
+      "target": "7",
+      "id": "1-7",
+      "label": "Amount: 658.22",
+      "amount": 658.22,
+      "data": {
+        "source": "1",
+        "target": "7",
+        "id": "1-7",
+        "label": "Amount: 658.22",
+        "amount": 658.22
+      }
+    },
+    {
+      "source": "9",
+      "target": "8",
+      "id": "9-8",
+      "label": "Amount: 41.79",
+      "amount": 41.79,
+      "data": {
+        "source": "9",
+        "target": "8",
+        "id": "9-8",
+        "label": "Amount: 41.79",
+        "amount": 41.79
+      }
+    },
+    {
+      "source": "9",
+      "target": "10",
+      "id": "9-10",
+      "label": "Amount: 1392.00",
+      "amount": 1392,
+      "data": {
+        "source": "9",
+        "target": "10",
+        "id": "9-10",
+        "label": "Amount: 526.2",
+        "amount": 1392
+      }
+    },
+    {
+      "source": "2",
+      "target": "4",
+      "id": "2-4",
+      "label": "Amount: 946.42",
+      "amount": 946.42,
+      "data": {
+        "source": "2",
+        "target": "4",
+        "id": "2-4",
+        "label": "Amount: 946.42",
+        "amount": 946.42
+      }
+    },
+    {
+      "source": "7",
+      "target": "2",
+      "id": "7-2",
+      "label": "Amount: 841.73",
+      "amount": 841.73,
+      "data": {
+        "source": "7",
+        "target": "2",
+        "id": "7-2",
+        "label": "Amount: 692.96",
+        "amount": 841.73
+      }
+    },
+    {
+      "source": "8",
+      "target": "5",
+      "id": "8-5",
+      "label": "Amount: 814.39",
+      "amount": 814.39,
+      "data": {
+        "source": "8",
+        "target": "5",
+        "id": "8-5",
+        "label": "Amount: 814.39",
+        "amount": 814.39
+      }
+    },
+    {
+      "source": "4",
+      "target": "6",
+      "id": "4-6",
+      "label": "Amount: 249.29",
+      "amount": 249.29,
+      "data": {
+        "source": "4",
+        "target": "6",
+        "id": "4-6",
+        "label": "Amount: 249.29",
+        "amount": 249.29
+      }
+    },
+    {
+      "source": "6",
+      "target": "10",
+      "id": "6-10",
+      "label": "Amount: 454.75",
+      "amount": 454.75,
+      "data": {
+        "source": "6",
+        "target": "10",
+        "id": "6-10",
+        "label": "Amount: 454.75",
+        "amount": 454.75
+      }
+    },
+    {
+      "source": "6",
+      "target": "7",
+      "id": "6-7",
+      "label": "Amount: 651.38",
+      "amount": 651.38,
+      "data": {
+        "source": "6",
+        "target": "7",
+        "id": "6-7",
+        "label": "Amount: 651.38",
+        "amount": 651.38
+      }
+    },
+    {
+      "source": "10",
+      "target": "9",
+      "id": "10-9",
+      "label": "Amount: 670.77",
+      "amount": 670.77,
+      "data": {
+        "source": "10",
+        "target": "9",
+        "id": "10-9",
+        "label": "Amount: 128.62",
+        "amount": 670.77
+      }
+    },
+    {
+      "source": "5",
+      "target": "3",
+      "id": "5-3",
+      "label": "Amount: 242.85",
+      "amount": 242.85,
+      "data": {
+        "source": "5",
+        "target": "3",
+        "id": "5-3",
+        "label": "Amount: 242.85",
+        "amount": 242.85
+      }
+    },
+    {
+      "source": "3",
+      "target": "7",
+      "id": "3-7",
+      "label": "Amount: 201.97",
+      "amount": 201.97,
+      "data": {
+        "source": "3",
+        "target": "7",
+        "id": "3-7",
+        "label": "Amount: 201.97",
+        "amount": 201.97
+      }
+    },
+    {
+      "source": "4",
+      "target": "7",
+      "id": "4-7",
+      "label": "Amount: 36.05",
+      "amount": 36.05,
+      "data": {
+        "source": "4",
+        "target": "7",
+        "id": "4-7",
+        "label": "Amount: 36.05",
+        "amount": 36.05
+      }
+    },
+    {
+      "source": "5",
+      "target": "9",
+      "id": "5-9",
+      "label": "Amount: 152.92",
+      "amount": 152.92,
+      "data": {
+        "source": "5",
+        "target": "9",
+        "id": "5-9",
+        "label": "Amount: 152.92",
+        "amount": 152.92
+      }
+    },
+    {
+      "source": "8",
+      "target": "7",
+      "id": "8-7",
+      "label": "Amount: 943.57",
+      "amount": 943.57,
+      "data": {
+        "source": "8",
+        "target": "7",
+        "id": "8-7",
+        "label": "Amount: 943.57",
+        "amount": 943.57
+      }
+    },
+    {
+      "source": "2",
+      "target": "3",
+      "id": "2-3",
+      "label": "Amount: 791.83",
+      "amount": 791.83,
+      "data": {
+        "source": "2",
+        "target": "3",
+        "id": "2-3",
+        "label": "Amount: 791.83",
+        "amount": 791.83
+      }
+    },
+    {
+      "source": "10",
+      "target": "4",
+      "id": "10-4",
+      "label": "Amount: 994.13",
+      "amount": 994.13,
+      "data": {
+        "source": "10",
+        "target": "4",
+        "id": "10-4",
+        "label": "Amount: 994.13",
+        "amount": 994.13
+      }
+    },
+    {
+      "source": "7",
+      "target": "1",
+      "id": "7-1",
+      "label": "Amount: 701.90",
+      "amount": 701.9,
+      "data": {
+        "source": "7",
+        "target": "1",
+        "id": "7-1",
+        "label": "Amount: 701.9",
+        "amount": 701.9
       }
     }
   ]
