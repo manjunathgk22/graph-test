@@ -1,3 +1,5 @@
+import { formatNumberWithIntl } from "./utils";
+
 export const rawData = [
   {
     "Transaction DateTime": "6/28/2024 23:05:53",
@@ -574,6 +576,8 @@ export const rawData = [
 export const convertToGraph = ()=>{
   const nodes = {};
     let edges = [];
+    const edgesMap = {};
+    const edgesAmount = {}
     rawData.forEach(transaction => {
       const sourceAccount = transaction['Source Account Number'].toString();
       const destinationAccount = transaction['Destination ACCOUNT'].toString();
@@ -601,12 +605,14 @@ export const convertToGraph = ()=>{
           }
         };
       }
-
+      const edgeKey = `${sourceAccount}-${destinationAccount}`;
+      edgesMap[edgeKey] = edgesMap[edgeKey]? edgesMap[edgeKey] + 1 : 1;
+      edgesAmount[edgeKey] = edgesAmount[edgeKey]? edgesAmount[edgeKey] + (amount?.replace?.(/[₦,.]/g, '')/100) : (amount?.replace?.(/[₦,.]/g, '')/100);
       // Add edge for the transaction
       edges.push({
         source: sourceAccount,
         target: destinationAccount,
-        id: `${sourceAccount}-${destinationAccount}`,
+        id: edgeKey,
         label: `${amount}`,
         data: {
           amount,
@@ -618,12 +624,22 @@ export const convertToGraph = ()=>{
         }
       });
     });
+    edges = edges.map(edge => ({
+      ...edge,
+      label: `${formatNumberWithIntl(edgesAmount[edge.id])} (${edgesMap[edge.id]})`,
+      data: {
+        ...edge.data,
+        // totalAmount:  '₦' + edgesAmount[edge.id].toFixed(2),
+        totalAmount: new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN' }).format(edgesAmount[edge.id].toFixed(2))
+      }
+    }))
     const _nodes = Object.values(nodes)
     // edges = edges.map(edge => {
     //   const source = _nodes.find(n => n.id === edge.source);
     //   const target = _nodes.find(n => n.id === edge.target);
     //   return ({...edge, data: {...edge.data, userLabel: `${source.label} - ${target.label}` } })
     // });
+    
     return  {
       nodes: _nodes,
       edges,
@@ -632,3 +648,5 @@ export const convertToGraph = ()=>{
 }
 
 export const DATA = convertToGraph()
+
+console.log('qqqq',rawData)

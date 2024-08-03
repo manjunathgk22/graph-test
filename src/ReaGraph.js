@@ -5,6 +5,7 @@ import { DATA, rawData } from "./csvjson";
 import { Resizable } from "react-resizable";
 import "react-resizable/css/styles.css";
 import Transactions from "./Transactions";
+import {omit} from 'lodash'
 const ReaGraph = () => {
   const graphRef = useRef(null);
   const [width, setWidth] = useState(200);
@@ -52,10 +53,16 @@ const ReaGraph = () => {
   }, [selectedAccountNumber]);
 
   const tableData = useMemo(() => {
-    if (selected) return filterGraphData(selected.id, graphData)?.edges;
-    else return [];
+    if(!selected) return [];
+    if(selected?.data?.totalAmount){
+      return graphData?.edges?.filter(edge => edge.id === selected.id)
+    }
+    else {
+      return filterGraphData(selected.id, graphData)?.edges;
+    }
+   
   }, [selected, graphData]);
-  console.log("rrrr", graphData);
+  
 
   // useEffect(() => {
   //   if (selected) {
@@ -86,6 +93,15 @@ const ReaGraph = () => {
       <h3 className="flex text-left font-bold bg-white p-2 mt-6">
       Account Visualization
       </h3>
+      {/* <div className="py-4">
+        <div className="flex flex-row gap-2">
+          <h5>fill Color By</h5>
+          <select>
+            <option value="AccountNumber">Account Number</option>
+
+          </select>
+        </div>
+      </div> */}
       <div className="flex gap-4 bg-white flex-1">
         <div className="flex flex-1 relative transition-all duration-300 bg-slate-100">
           {!graphData.nodes?.length ? (
@@ -102,7 +118,7 @@ const ReaGraph = () => {
               ref={graphRef}
               nodes={graphData.nodes}
               edges={graphData.edges}
-              labelType="nodes"
+              labelType="all"
               draggable
               edgeInterpolation="linear"
               onCanvasClick={(...props) => {
@@ -162,9 +178,9 @@ const ReaGraph = () => {
               {selected ? (
                 <ul className=" text-left">
                   <li className="bold text-lg whitespace-nowrap">
-                    {selected.label}
+                    {selected?.data?.totalAmount? selected.label + ' Transactions':  selected.label}
                   </li>
-                  {Object.entries(selected.data).map(([key, value], i) => (
+                  {Object.entries(omit(selected.data, ['amount', "Transaction Date"])).map(([key, value], i) => (
                     <li key={key + i}>
                       <span className="whitespace-nowrap font-light">
                         {key}:
