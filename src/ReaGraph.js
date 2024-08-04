@@ -6,14 +6,17 @@ import { Resizable } from "react-resizable";
 import "react-resizable/css/styles.css";
 import Transactions from "./Transactions";
 import {omit} from 'lodash'
+import { generateColors } from "./utils";
+const graph = {
+  nodes: DATA.nodes,
+  edges: DATA.edges,
+}
 const ReaGraph = () => {
   const graphRef = useRef(null);
   const [width, setWidth] = useState(200);
   const [selected, setselected] = useState();
-  const [graphData, setgraphData] = useState({
-    nodes: DATA.nodes,
-    edges: DATA.edges,
-  });
+  const [graphData, setgraphData] = useState(graph);
+  const [color, setcolor] = useState("default")
   const [selectedAccountNumber, setselectedAccountNumber] = useState("");
   const [_selections, _setselections] = useState([]);
   const {
@@ -33,7 +36,6 @@ const ReaGraph = () => {
     edges: graphData.edges,
     pathSelectionType: "all",
     // type: 'multi',
-    hotkeys: ["deselect"],
   });
   const onResize = (event, { size }) => {
     setWidth(size.width < 100 ? 100 : size.width);
@@ -63,15 +65,40 @@ const ReaGraph = () => {
    
   }, [selected, graphData]);
   
+  const bvnMap = useMemo(()=>{
+    const _bvnMap = new Map()
+    graphData.nodes.forEach((node) => {
+      if(!_bvnMap.has(node.data.bvn)) _bvnMap.set(node.data.bvn, '')
+    })
+    const _colors = generateColors(_bvnMap.size);
+    Array.from(_bvnMap).map(([key, value], i) => {
+      _bvnMap.set(key, _colors[i])
+    })
+   
+    return _bvnMap
+  }, [graphData])
+  console.log('xxx', bvnMap)
 
-  // useEffect(() => {
-  //   if (selected) {
-  //     sideBarRef.current.style.width = "400px";
-  //   } else {
-  //     sideBarRef.current.style.width = "0px";
-  //   }
-  // }, [selected]);
-
+ useEffect(()=>{
+  if(color === 'default'){
+    setgraphData(graphData => ({
+      ...graphData,
+      nodes: graphData.nodes.map(node => ({
+        ...node,
+        fill: '#7CA0AB'
+      }))
+    }))
+  }else if(color === 'BVN'){
+    setgraphData(graphData => ({
+      ...graphData,
+      nodes: graphData.nodes.map(node => ({
+        ...node,
+        fill: bvnMap.get(node.data.bvn)
+      }))
+    }))
+    
+  }
+ }, [color])
   return (
     <div className="flex-1 flex flex-col h-full overflow-auto p-4">
       <div className="flex-1 flex flex-row min-h-[70px] gap-6 items-center bg-slate-100 justify-center transition-all duration-300">
@@ -93,15 +120,15 @@ const ReaGraph = () => {
       <h3 className="flex text-left font-bold bg-white p-2 mt-6">
       Account Visualization
       </h3>
-      {/* <div className="py-4">
-        <div className="flex flex-row gap-2">
-          <h5>fill Color By</h5>
-          <select>
-            <option value="AccountNumber">Account Number</option>
-
+      <div className="py-4">
+        <div className="flex flex-row gap-2 items-center">
+          <h5>Fill Color By</h5>
+          <select onChange={(e)=>setcolor(e.target.value)} value={color} className="p-3 bg-slate-300 rounded-md justify-center items-center flex w-[150px]">
+            <option value="default">default</option>
+            <option value="BVN">BVN</option>
           </select>
         </div>
-      </div> */}
+      </div>
       <div className="flex gap-4 bg-white flex-1">
         <div className="flex flex-1 relative transition-all duration-300 bg-slate-100">
           {!graphData.nodes?.length ? (
@@ -180,7 +207,7 @@ const ReaGraph = () => {
                   <li className="bold text-lg whitespace-nowrap">
                     {selected?.data?.totalAmount? selected.label + ' Transactions':  selected.label}
                   </li>
-                  {Object.entries(omit(selected.data, ['amount', "Transaction Date"])).map(([key, value], i) => (
+                  {Object.entries(omit(selected.data, ['amount', "Transaction Date", 'transactionRef'])).map(([key, value], i) => (
                     <li key={key + i}>
                       <span className="whitespace-nowrap font-light">
                         {key}:
@@ -201,9 +228,9 @@ const ReaGraph = () => {
                               <thead>
                                 <tr>
                                   {Object.keys(tableData[0]?.data).map(
-                                    (key) => (
+                                    (key, i) => (
                                       <th
-                                        key={key}
+                                        key={key + i}
                                         scope="col"
                                         class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500"
                                       >
@@ -215,10 +242,10 @@ const ReaGraph = () => {
                               </thead>
                               <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
                                 {tableData.map((edge, i) => (
-                                  <tr key={edge.id}>
-                                    {Object.values(edge.data).map((value) => (
+                                  <tr key={''+edge.id + `${i}`}>
+                                    {Object.values(edge.data).map((value, i) => (
                                       <td
-                                        key={value}
+                                        key={'' +value + `${i}`}
                                         class="px-6 py-4 text-start text-sm font-medium text-gray-500 dark:text-neutral-500"
                                       >
                                         {value?.toString()}

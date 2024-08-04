@@ -12,3 +12,17 @@ export function formatNumberWithIntl(num) {
   }
 }
 
+
+export function generateColors(n) {
+    const colors = [];
+    const saturation = 70; // Adjust as needed (percentage)
+    const lightness = 50;  // Adjust as needed (percentage)
+  
+    for (let i = 0; i < n; i++) {
+      const hue = Math.floor((i * 360 / n) % 360);
+      const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+      colors.push(color);
+    }
+  
+    return colors;
+  }
