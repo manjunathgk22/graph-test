@@ -51,6 +51,7 @@ const ReaGraph = () => {
 
   useEffect(() => {
     const result = filterTransactions(selectedAccountNumber);
+    console.log('result', result)
     setgraphData(result);
   }, [selectedAccountNumber]);
 
@@ -77,7 +78,6 @@ const ReaGraph = () => {
    
     return _bvnMap
   }, [graphData])
-  console.log('xxx', bvnMap)
 
  useEffect(()=>{
   if(color === 'default'){
@@ -98,7 +98,8 @@ const ReaGraph = () => {
     }))
     
   }
- }, [color])
+ }, [bvnMap, color, setgraphData])
+ 
   return (
     <div className="flex-1 flex flex-col h-full overflow-auto p-4">
       <div className="flex-1 flex flex-row min-h-[70px] gap-6 items-center bg-slate-100 justify-center transition-all duration-300">
@@ -115,7 +116,7 @@ const ReaGraph = () => {
         {/* <button onClick={()=> selectNodePaths(graphData.nodes[0].id, graphData.nodes[1].id)}>click</button> */}
       </div>
       
-        <Transactions tableData={graphData.edges} />
+        {/* <Transactions tableData={graphData.edges} /> */}
     
       <h3 className="flex text-left font-bold bg-white p-2 mt-6">
       Account Visualization
@@ -136,7 +137,8 @@ const ReaGraph = () => {
               <h3>No Accounts found for {selectedAccountNumber}</h3>
             </div>
           ) : (
-            <GraphCanvas
+            <div className="flex flex-1 relative">
+              <GraphCanvas
               theme={theme}
               layoutType="hierarchicalLr"
               key={selectedAccountNumber}
@@ -179,6 +181,7 @@ const ReaGraph = () => {
                 // setselected()
               }}
             />
+              </div>
           )}
         </div>
         <Resizable
@@ -219,7 +222,7 @@ const ReaGraph = () => {
               ) : null}
               <div key={tableData}>
                 {selected && tableData?.length ? (
-                  <div className="pl-4">
+                  <div className="pl-4 mt-8">
                     <div class="flex flex-col" key={selectedAccountNumber}>
                       <div class="-m-1.5 overflow-x-auto">
                         <div class="p-1.5 min-w-full inline-block align-middle">
@@ -304,20 +307,29 @@ const filterTransactions = (parentId, data) => {
     throw new Error(`Root node with id ${parentId} not found`);
   }
 
-  const recursiveSearch = (nodeId) => {
+  const recursiveSearch = (nodeId, direction) => {
     data.edges.forEach((edge) => {
-      if (edge.source === nodeId) {
-        resultEdges.add(edge);
-        const targetNodeId = edge.target;
-        if (!resultNodes.has(targetNodeId)) {
-          resultNodes.add(targetNodeId);
-          recursiveSearch(targetNodeId);
-        }
+      let connectedNodeId;
+      if (direction === 'out' && edge.source === nodeId) {
+        connectedNodeId = edge.target;
+      } else if (direction === 'in' && edge.target === nodeId) {
+        connectedNodeId = edge.source;
+      } else {
+        return;
+      }
+
+      resultEdges.add(edge);
+      if (!resultNodes.has(connectedNodeId)) {
+        resultNodes.add(connectedNodeId);
+        recursiveSearch(connectedNodeId, direction);
       }
     });
   };
 
-  recursiveSearch(parentId);
+  // Search for outflow transactions
+  recursiveSearch(parentId, 'out');
+  // Search for inflow transactions
+  recursiveSearch(parentId, 'in');
 
   return {
     nodes: Array.from(resultNodes).map((nodeId) =>
