@@ -2,7 +2,7 @@ import { formatNumberWithIntl } from "./utils";
 
 export const rawData = [
   {
-    "2019342186": "6/28/2024 23:05:53",
+    "transaction time":"6/28/2024 23:05:53",
     "Source Account Number": "0051129613",
     "Source BVN": 2020134567,
     "Destination ACCOUNT": 4644085468,
@@ -19,7 +19,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/28/2024 23:19:01",
+    "transaction time":"6/28/2024 23:19:01",
     "Source Account Number": "0051129613",
     "Source BVN": 2020134567,
     "Destination ACCOUNT": 4644085468,
@@ -36,7 +36,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:31:53",
+    "transaction time":"6/29/2024 0:31:53",
     "Source Account Number": 4644085468,
     "Source BVN": 2019342186,
     "Destination ACCOUNT": 6645820291,
@@ -53,7 +53,7 @@ export const rawData = [
     "__2": "confusing (System suggests it failed and reversed) :: Looks like just an issue with the response code being mapped"
   },
   {
-    "2019342186": "6/29/2024 0:33:21",
+    "transaction time":"6/29/2024 0:33:21",
     "Source Account Number": 4644085468,
     "Source BVN": 2019342186,
     "Destination ACCOUNT": 6645820291,
@@ -70,7 +70,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:34:10",
+    "transaction time":"6/29/2024 0:34:10",
     "Source Account Number": 4644085468,
     "Source BVN": 2019342186,
     "Destination ACCOUNT": 6645820291,
@@ -87,7 +87,7 @@ export const rawData = [
     "__2": "confusing(System suggests it failed and reversed)"
   },
   {
-    "2019342186": "6/29/2024 0:40:17",
+    "transaction time":"6/29/2024 0:40:17",
     "Source Account Number": 4644085468,
     "Source BVN": 2019342186,
     "Destination ACCOUNT": 6639823406,
@@ -104,7 +104,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:41:07",
+    "transaction time":"6/29/2024 0:41:07",
     "Source Account Number": 4644085468,
     "Source BVN": 2019342186,
     "Destination ACCOUNT": 6639823406,
@@ -121,7 +121,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:43:49",
+    "transaction time":"6/29/2024 0:43:49",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": 1804596281,
@@ -138,7 +138,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:47:57",
+    "transaction time":"6/29/2024 0:47:57",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": 8186969215,
@@ -155,7 +155,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 0:50:26",
+    "transaction time":"6/29/2024 0:50:26",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": 6102321923,
@@ -172,7 +172,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 11:00:56",
+    "transaction time":"6/29/2024 11:00:56",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_Request_Account",
@@ -189,7 +189,7 @@ export const rawData = [
     "__2": "Card Request ( This is very serious!!)"
   },
   {
-    "2019342186": "6/29/2024 11:10:34",
+    "transaction time":"6/29/2024 11:10:34",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "Card_Request_Account",
@@ -206,7 +206,7 @@ export const rawData = [
     "__2": "Card Request ( This is very serious!!)"
   },
   {
-    "2019342186": "6/29/2024 11:35:21",
+    "transaction time":"6/29/2024 11:35:21",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": 3847478011,
@@ -223,7 +223,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 12:01:06",
+    "transaction time":"6/29/2024 12:01:06",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -240,7 +240,7 @@ export const rawData = [
     "__2": "Card Debit on_us_verve_card_purchase"
   },
   {
-    "2019342186": "6/29/2024 12:01:30",
+    "transaction time":"6/29/2024 12:01:30",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -257,7 +257,7 @@ export const rawData = [
     "__2": "Card Debit on_us_verve_card_purchase"
   },
   {
-    "2019342186": "6/29/2024 12:02:45",
+    "transaction time":"6/29/2024 12:02:45",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -274,7 +274,7 @@ export const rawData = [
     "__2": "card debit on_us_verve_card_purchase"
   },
   {
-    "2019342186": "6/29/2024 12:03:58",
+    "transaction time":"6/29/2024 12:03:58",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -291,7 +291,7 @@ export const rawData = [
     "__2": "card debit on_us_verve_card_purchase"
   },
   {
-    "2019342186": "6/29/2024 12:04:39",
+    "transaction time":"6/29/2024 12:04:39",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -308,7 +308,7 @@ export const rawData = [
     "__2": "card debit on_us_verve_card_purchase"
   },
   {
-    "2019342186": "6/29/2024 12:45:36",
+    "transaction time":"6/29/2024 12:45:36",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": 2086916253,
@@ -325,7 +325,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 12:52:35",
+    "transaction time":"6/29/2024 12:52:35",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -342,7 +342,7 @@ export const rawData = [
     "__2": "card debit isw_verve_card_transfer"
   },
   {
-    "2019342186": "6/29/2024 12:53:25",
+    "transaction time":"6/29/2024 12:53:25",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -359,7 +359,7 @@ export const rawData = [
     "__2": "card debit isw_verve_card_transfer"
   },
   {
-    "2019342186": "6/29/2024 12:55:49",
+    "transaction time":"6/29/2024 12:55:49",
     "Source Account Number": 6639823406,
     "Source BVN": 2015823406,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -376,7 +376,7 @@ export const rawData = [
     "__2": "card debit isw_verve_card_transfer"
   },
   {
-    "2019342186": "6/29/2024 12:57:42",
+    "transaction time":"6/29/2024 12:57:42",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -393,7 +393,7 @@ export const rawData = [
     "__2": "card debit isw_verve_card_transfer"
   },
   {
-    "2019342186": "6/29/2024 12:58:23",
+    "transaction time":"6/29/2024 12:58:23",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "Card_acquirer_account",
@@ -410,7 +410,7 @@ export const rawData = [
     "__2": "card debit isw_verve_card_transfer"
   },
   {
-    "2019342186": "6/29/2024 13:18:52",
+    "transaction time":"6/29/2024 13:18:52",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": 2086916253,
@@ -427,7 +427,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 13:50:49",
+    "transaction time":"6/29/2024 13:50:49",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "0097946297",
@@ -444,7 +444,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 13:51:31",
+    "transaction time":"6/29/2024 13:51:31",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "0097946297",
@@ -461,7 +461,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 13:57:07",
+    "transaction time":"6/29/2024 13:57:07",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": "0097946297",
@@ -478,7 +478,7 @@ export const rawData = [
     "__2": ""
   },
   {
-    "2019342186": "6/29/2024 14:17:22",
+    "transaction time":"6/29/2024 14:17:22",
     "Source Account Number": 6645820291,
     "Source BVN": 2018345643,
     "Destination ACCOUNT": 2086916253,
@@ -508,7 +508,7 @@ export const convertToGraph = ()=>{
       // Create nodes if they don't already exist
       if (!nodes[sourceAccount] || (nodes[sourceAccount] && nodes[sourceAccount].data.bankName === 'Unknown')) {
         nodes[sourceAccount] = {
-          id: sourceAccount,
+          id: sourceAccount ,
           label: transaction['Account Name'],
           data: {
             accountName: transaction['Account Name'],
@@ -574,6 +574,63 @@ export const convertToGraph = ()=>{
     };
 }
 
-export const DATA = convertToGraph()
+const convertToBTree = () => {
+  const nodes = [];
+  const edges = [];
 
-console.log('qqqq',rawData)
+  rawData.forEach((transaction, i) => {
+    const sourceId = `source ${transaction["Source Account Number"]}-${transaction["Destination ACCOUNT"]}-${i}`;
+    const destinationId = `destination ${transaction["Source Account Number"]}-${transaction["Destination ACCOUNT"]}-${i}`;
+
+    if (nodes.length === 0) {
+      nodes.push({
+        id: sourceId,
+        label: transaction["Account Name"],
+        accountNumber: transaction["Source Account Number"],
+      });
+      nodes.push({
+        id: destinationId,
+        label: transaction["Account Name"],
+        accountNumber: transaction["Destination ACCOUNT"],
+      });
+      edges.push({
+        source: sourceId,
+        target: destinationId,
+        id: `${sourceId}-${destinationId}`,
+        label: `${transaction['Amount']}`,
+      });
+    } else {
+      let sourceNode = null;
+      for (let j = i - 1; j >= 0; j--) {
+        if (rawData[j]['Destination ACCOUNT'] === transaction["Source Account Number"]) {
+          sourceNode = nodes.find(node => node.accountNumber === transaction["Source Account Number"]);
+          if (sourceNode) break;
+        }
+      }
+
+      if (sourceNode) {
+        nodes.push({
+          id: destinationId,
+          label: transaction["Account Name"],
+          accountNumber: transaction["Destination ACCOUNT"],
+        });
+        edges.push({
+          source: sourceNode.id,
+          from: sourceNode.id,
+          to: destinationId,
+          target: destinationId,
+          id: `${sourceNode.id}-${destinationId}`,
+          label: `${transaction['Amount']}`,
+        });
+      }
+    }
+  });
+
+  return {
+    nodes,
+    edges,
+  };
+};
+console.log('vvvv',convertToBTree())
+export const BTREE = convertToBTree()
+export const DATA = convertToGraph()
